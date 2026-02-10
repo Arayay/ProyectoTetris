@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ProyectoFinal.Core/ProyectoFinal.Core.csproj" Id="22f0d428-7f35-4494-9ec0-ba70df393c5d" />
+  <Project Path="ProyectoFinal.Data/ProyectoFinal.Data.csproj" Id="1b05f713-f73e-4982-985b-ee3ba9ea7a3f" />
+  <Project Path="ProyectoFinal.Models/ProyectoFinal.Models.csproj" Id="20bc977c-f0f9-444a-b15d-a55cf35e7df5" />
+  <Project Path="ProyectoFinal/ProyectoFinal.web.csproj" Id="f61e03f1-59d8-42d8-b61e-0da2c8ba14d3" />
+</Solution>

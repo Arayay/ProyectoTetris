@@ -12,6 +12,23 @@ namespace ProyectoFinal.Controllers
     public class UsersController : Controller
     {
         private ProyectoFinalDbEntities db = new ProyectoFinalDbEntities();
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            if (Session["UserId"] == null)
+            {
+                filterContext.Result = RedirectToAction("Login", "Login");
+                return;
+            }
+
+            if (Session["Role"] == null || Session["Role"].ToString() != "Admin")
+            {
+                filterContext.Result = RedirectToAction("Index", "Home");
+                return;
+            }
+
+            base.OnActionExecuting(filterContext);
+        }
+
 
         // GET: Users
         public async Task<ActionResult> Index()

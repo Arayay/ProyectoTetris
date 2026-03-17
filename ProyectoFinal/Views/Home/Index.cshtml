@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Landing Page";
+}
+
+<div style="padding:30px;">
+    <h2>Bienvenido al Proyecto Final - Tetris</h2>
+
+    <p>Usuario autenticado: <strong>@ViewBag.Username</strong></p>
+
+    <hr />
+
+    <h2>Menú principal</h2>
+    <ul>
+        <li>@Html.ActionLink("Ir al juego", "Index", "Tetris")</li>
+
+        @if (Session["Role"] != null && Session["Role"].ToString() == "Admin")
+        {
+            <li>@Html.ActionLink("Mantenimiento de usuarios", "Index", "Users")</li>
+        }
+
+        <li>@Html.ActionLink("Cerrar sesión", "Logout", "Login")</li>
+    </ul>
+
+
+    <hr />
+
+    <p>Esta area esta en en mantenimiento.</p>
+</div>

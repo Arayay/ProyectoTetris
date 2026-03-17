@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProyectoFinalDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="GameSessions">
+    <Key>
+      <PropertyRef Name="GameSessionId" />
+    </Key>
+    <Property Name="GameSessionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+    <Property Name="Level" Type="Int32" Nullable="false" />
+    <Property Name="LinesCleared" Type="Int32" Nullable="false" />
+    <Property Name="DurationSeconds" Type="Int32" Nullable="false" />
+    <Property Name="StartedAt" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="EndedAt" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_GameSessions_Users" FromRole="GameSessions" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaxScore" Type="Int32" Nullable="false" />
+    <Property Name="TotalGames" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="GameSessions" Relationship="Self.FK_GameSessions_Users" FromRole="Users" ToRole="GameSessions" />
+    <NavigationProperty Name="UserSettings" Relationship="Self.FK_UserSettings_Users" FromRole="Users" ToRole="UserSettings" />
+    <Property Name="Role" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserSettings">
+    <Key>
+      <PropertyRef Name="UserSettingsId" />
+    </Key>
+    <Property Name="UserSettingsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="BoardWidth" Type="Int32" Nullable="false" />
+    <Property Name="BoardHeight" Type="Int32" Nullable="false" />
+    <Property Name="StartingLevel" Type="Int32" Nullable="false" />
+    <Property Name="Theme" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsSoundEnabled" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_UserSettings_Users" FromRole="UserSettings" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_GameSessions_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="GameSessions" Type="Self.GameSessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="GameSessions">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSettings_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UserSettings" Type="Self.UserSettings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserSettings">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProyectoFinalDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GameSessions" EntityType="Self.GameSessions" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="UserSettings" EntityType="Self.UserSettings" />
+    <AssociationSet Name="FK_GameSessions_Users" Association="Self.FK_GameSessions_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="GameSessions" EntitySet="GameSessions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSettings_Users" Association="Self.FK_UserSettings_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserSettings" EntitySet="UserSettings" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

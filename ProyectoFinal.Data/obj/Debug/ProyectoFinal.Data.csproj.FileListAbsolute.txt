@@ -7,3 +7,8 @@ C:\dev\ProyectoFinal\ProyectoFinal.Data\obj\Debug\ProyectoFinal.Data.csproj.Core
 C:\dev\ProyectoFinal\ProyectoFinal.Data\obj\Debug\Proyecto.C505BE84.Up2Date
 C:\dev\ProyectoFinal\ProyectoFinal.Data\obj\Debug\ProyectoFinal.Data.dll
 C:\dev\ProyectoFinal\ProyectoFinal.Data\obj\Debug\ProyectoFinal.Data.pdb
+C:\dev\ProyectoFinal\ProyectoFinal.Data\bin\Debug\ProyectoFinal.Data.dll.config
+C:\dev\ProyectoFinal\ProyectoFinal.Data\bin\Debug\EntityFramework.dll
+C:\dev\ProyectoFinal\ProyectoFinal.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\dev\ProyectoFinal\ProyectoFinal.Data\bin\Debug\EntityFramework.xml
+C:\dev\ProyectoFinal\ProyectoFinal.Data\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ProyectoFinal.Data.Users>
+
+@{
+    ViewBag.Title = "Mantenimiento de Usuarios";
+}
+
+<h2>Mantenimiento de Usuarios</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Usuario", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxScore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalGames)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalGames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.UserId }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.UserId }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.UserId })
+            </td>
+        </tr>
+    }
+
+</table>

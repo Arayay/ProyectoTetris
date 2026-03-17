@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProyectoFinalDbModelStoreContainer" CdmEntityContainer="ProyectoFinalDbEntities">
+    <EntitySetMapping Name="GameSessions">
+      <EntityTypeMapping TypeName="ProyectoFinalDbModel.GameSessions">
+        <MappingFragment StoreEntitySet="GameSessions">
+          <ScalarProperty Name="GameSessionId" ColumnName="GameSessionId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="LinesCleared" ColumnName="LinesCleared" />
+          <ScalarProperty Name="DurationSeconds" ColumnName="DurationSeconds" />
+          <ScalarProperty Name="StartedAt" ColumnName="StartedAt" />
+          <ScalarProperty Name="EndedAt" ColumnName="EndedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ProyectoFinalDbModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MaxScore" ColumnName="MaxScore" />
+          <ScalarProperty Name="TotalGames" ColumnName="TotalGames" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSettings">
+      <EntityTypeMapping TypeName="ProyectoFinalDbModel.UserSettings">
+        <MappingFragment StoreEntitySet="UserSettings">
+          <ScalarProperty Name="UserSettingsId" ColumnName="UserSettingsId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="BoardWidth" ColumnName="BoardWidth" />
+          <ScalarProperty Name="BoardHeight" ColumnName="BoardHeight" />
+          <ScalarProperty Name="StartingLevel" ColumnName="StartingLevel" />
+          <ScalarProperty Name="Theme" ColumnName="Theme" />
+          <ScalarProperty Name="IsSoundEnabled" ColumnName="IsSoundEnabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

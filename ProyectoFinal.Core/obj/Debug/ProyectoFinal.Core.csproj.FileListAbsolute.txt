@@ -12,3 +12,17 @@ C:\dev\ProyectoFinal\ProyectoFinal.Core\obj\Debug\ProyectoFinal.Core.pdb
 C:\dev\ProyectoFinal\ProyectoFinal.Core\bin\Debug\EntityFramework.dll
 C:\dev\ProyectoFinal\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Data.dll.config
 C:\dev\ProyectoFinal\ProyectoFinal.Core\bin\Debug\EntityFramework.xml
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Core.dll
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Core.pdb
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Data.dll
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Models.dll
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\EntityFramework.dll
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Data.pdb
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Data.dll.config
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\ProyectoFinal.Models.pdb
+C:\dev\ProyectoTetris\ProyectoFinal.Core\bin\Debug\EntityFramework.xml
+C:\dev\ProyectoTetris\ProyectoFinal.Core\obj\Debug\ProyectoFinal.Core.csproj.AssemblyReference.cache
+C:\dev\ProyectoTetris\ProyectoFinal.Core\obj\Debug\ProyectoFinal.Core.csproj.CoreCompileInputs.cache
+C:\dev\ProyectoTetris\ProyectoFinal.Core\obj\Debug\Proyecto.DEB69C5B.Up2Date
+C:\dev\ProyectoTetris\ProyectoFinal.Core\obj\Debug\ProyectoFinal.Core.dll
+C:\dev\ProyectoTetris\ProyectoFinal.Core\obj\Debug\ProyectoFinal.Core.pdb
